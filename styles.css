@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.homePage {
+  padding: 0 clamp(20px, calc(47 / 14.4 * 1vw), 47px);
+  padding-top: calc(113 / 14.4 * 1vw);
+}
+
+.homePage .navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, calc(8 / 14.4 * 1vw), 8px);
+}
+
+.navigation,
+.navigation > a {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navigation > a:first-child {
+  color: #808080;
+}
+
+.navigation {
+  margin-bottom: clamp(40px, calc(63 / 14.4 * 1vw), 63px);
+}
+
+.gallery {
+  width: 100%;
+  padding: 0 clamp(40px, calc(67 / 14.4 * 1vw), 67px);
+  display: flex;
+  align-items: center;
+  column-gap: clamp(50px, calc(120 / 14.4 * 1vw), 120px);
+  row-gap: clamp(40px, calc(80 / 14.4 * 1vw), 80px);
+  flex-wrap: wrap;
+}
+
+.galleryItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.galleryItem > img {
+  width: 100%;
+  max-width: clamp(200px, calc(324 / 14.4 * 1vw), 324px);
+  aspect-ratio: 324/462;
+}
+
+
+.galleryItem>p{
+  
+}
