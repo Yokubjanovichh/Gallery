@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fff;
+}
+
 .mainWrapper {
   width: 100%;
   overflow: hidden;
@@ -88,7 +92,10 @@
   aspect-ratio: 324/462;
   cursor: pointer;
   transition: all 0.4s ease;
-  background: red;
+  background: url(./assets/images/1.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .galleryItemWrapper:nth-child(1) .galleryItem {
@@ -147,102 +154,28 @@
   background-position: center;
 }
 
-.galleryItem div {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.galleryItem p {
   position: fixed;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -55%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  background: green;
-}
-
-.galleryItem .activeItem {
-  opacity: 1;
-  visibility: visible;
-}
-
-.galleryItem p {
-  position: absolute;
   font-family: "Bebas Neue";
   font-size: clamp(40px, calc(140 / 14.4 * 1vw), 130px);
   text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
-.galleryItemWrapper:nth-child(1) .galleryItem div p,
-.galleryItemWrapper:nth-child(4) .galleryItem div p,
-.galleryItemWrapper:nth-child(7) .galleryItem div p {
-  background: linear-gradient(
-    to right,
-    #fff 0%,
-    #fff 12.5%,
-    #000 12.5%,
-    #000 26%,
-    #fff 26%,
-    #fff 71.5%,
-    #000 71.5%,
-    #000 87.5%,
-    #fff 87.5%,
-    #fff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  white-space: nowrap;
-}
+/* .galleryItemWrapper:nth-child(1) .galleryItem p {
+  opacity: 1;
+  visibility: visible;
+} */
 
-.galleryItemWrapper:nth-child(2) .galleryItem div p,
-.galleryItemWrapper:nth-child(5) .galleryItem div p,
-.galleryItemWrapper:nth-child(8) .galleryItem div p {
-  background: linear-gradient(
-    to right,
-    #fff 0%,
-    #fff 9.5%,
-    #000 9.5%,
-    #000 26.5%,
-    #fff 26.5%,
-    #fff 73%,
-    #000 73%,
-    #000 90.5%,
-    #fff 90.5%,
-    #fff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  white-space: nowrap;
-}
-
-.galleryItemWrapper:nth-child(3) .galleryItem div p,
-.galleryItemWrapper:nth-child(6) .galleryItem div p,
-.galleryItemWrapper:nth-child(9) .galleryItem div p {
-  background: linear-gradient(
-    to right,
-    #fff 0%,
-    #fff 6%,
-    #000 6%,
-    #000 25%,
-    #fff 25%,
-    #fff 75%,
-    #000 75%,
-    #000 94%,
-    #fff 94%,
-    #fff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  white-space: nowrap;
-}
-.galleryItem:hover div {
+.galleryItem:hover p {
   opacity: 1;
   visibility: visible;
 }
@@ -412,3 +345,72 @@ form button {
 form button:hover {
   opacity: 0.6;
 }
+
+/* .galleryItemWrapper:nth-child(1) .galleryItem div p,
+.galleryItemWrapper:nth-child(4) .galleryItem div p,
+.galleryItemWrapper:nth-child(7) .galleryItem div p {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 12.5%,
+    #000 12.5%,
+    #000 26%,
+    #fff 26%,
+    #fff 71.5%,
+    #000 71.5%,
+    #000 87.5%,
+    #fff 87.5%,
+    #fff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.galleryItemWrapper:nth-child(2) .galleryItem div p,
+.galleryItemWrapper:nth-child(5) .galleryItem div p,
+.galleryItemWrapper:nth-child(8) .galleryItem div p {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 9.5%,
+    #000 9.5%,
+    #000 26.5%,
+    #fff 26.5%,
+    #fff 73%,
+    #000 73%,
+    #000 90.5%,
+    #fff 90.5%,
+    #fff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.galleryItemWrapper:nth-child(3) .galleryItem div p,
+.galleryItemWrapper:nth-child(6) .galleryItem div p,
+.galleryItemWrapper:nth-child(9) .galleryItem div p {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 6%,
+    #000 6%,
+    #000 25%,
+    #fff 25%,
+    #fff 75%,
+    #000 75%,
+    #000 94%,
+    #fff 94%,
+    #fff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  white-space: nowrap;
+} */
